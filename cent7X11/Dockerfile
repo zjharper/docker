@@ -1,6 +1,8 @@
 FROM centos:7
 
-RUN yum check-update && yum update && yum install -y firefox
+RUN yum check-update
+RUN yum update -y
+RUN yum install -y firefox
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /home/developer && \
